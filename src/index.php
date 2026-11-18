@@ -2,12 +2,11 @@
 
 namespace DesignPatterns\Patterns;
 
-require_once("CreationalPatterns/Connector.php");
 
-$connectionMySQL = CreationalPatterns\Connector::getInstance();
-print_r($connectionMySQL::getInstanceName());
+require_once("CreationalPatterns/Worker/WorkerFactory.php");
 
-$connectionMySQL::setInstanceName("MySQL");
+$worker1 = CreationalPatterns\Worker\WorkerFactory::create("Gerardo");
+$worker2 = CreationalPatterns\Worker\WorkerFactory::create("Raul");
+$worker3 = CreationalPatterns\Worker\WorkerFactory::create("Juan");
 
-$connectionMongo = CreationalPatterns\Connector::getInstance();
-print_r($connectionMongo::getInstanceName());
+var_dump($worker1, $worker2, $worker3);
