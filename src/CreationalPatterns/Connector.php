@@ -2,15 +2,22 @@
 
 namespace DesignPatterns\Patterns\CreationalPatterns;
 
-final class Singleton {
+// Singleton Pattern
+
+final class Connector {
     
     private static ?self $instance = null;
     private static ?string $name = null;
     
+    private function __construct()
+    {
+        
+    }
+    
     public static function getInstance(): self
     {
         if (self::$instance === null) {
-            self::$instance = new self();
+            self::$instance = new static();
         }
         
         return self::$instance;
@@ -31,7 +38,7 @@ final class Singleton {
         
     }
     
-    public function __clone(): void
+    private function __clone(): void
     {
         
     }

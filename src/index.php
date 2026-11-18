@@ -2,12 +2,12 @@
 
 namespace DesignPatterns\Patterns;
 
-require_once("CreationalPatterns/Singleton.php");
+require_once("CreationalPatterns/Connector.php");
 
-$connectionMySQL = CreationalPatterns\Singleton::getInstance();
+$connectionMySQL = CreationalPatterns\Connector::getInstance();
 print_r($connectionMySQL::getInstanceName());
 
 $connectionMySQL::setInstanceName("MySQL");
 
-$connectionMongo = CreationalPatterns\Singleton::getInstance();
+$connectionMongo = CreationalPatterns\Connector::getInstance();
 print_r($connectionMongo::getInstanceName());
