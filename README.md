@@ -1,1 +1,1 @@
-Main design patterns in PHP
+32 main design patterns in PHP
