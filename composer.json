@@ -1,0 +1,11 @@
+{
+	"autoload" : {
+		"psr-4" : {
+			"DesignPatterns\\Patterns\\" : "src"
+		}
+	},
+	"name" : "DesignPatterns/Patterns",
+	"require" : {
+		"php" : ">=8.3"
+	}
+}
